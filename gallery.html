@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Aica Ortega</title>
+    <style>
+        :root {
+            --page-bg: #16425b;
+            --article-bg: #3a7ca5;
+            --accent: #81c3d7;
+            --text-main: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--page-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: var(--article-bg);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #16425b;
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+        }
+
+        /* Header & Nav Styling */
+        header { text-align: center; margin-bottom: 30px; }
+        
+        .internal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .internal-links a, .back-home, .go-top {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .internal-links a:hover { color: #ffffff; text-decoration: underline; }
+
+        /* Gallery Grid Logic */
+        .gallery-section { margin-top: 50px; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        /* Photo Styling */
+        figure {
+            margin: 0;
+            background: rgba(22, 66, 91, 0.4);
+            padding: 10px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        figure:hover {
+            transform: scale(1.03);
+            background: rgba(22, 66, 91, 0.6);
+        }
+
+        .fitted-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .section-title {
+            border-left: 5px solid var(--page-bg);
+            padding-left: 15px;
+            text-transform: uppercase;
+            color: #16425b;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="top">
+    <a href="index.html" class="back-home">← Back to Landing Page</a>
+    
+    <header>
+        <h1>Memory Collections</h1>
+        <nav class="internal-links">
+            <a href="#childhood">Childhood</a>
+            <a href="#teenage">Teenage</a>
+            <a href="#college">College</a>
+            <a href="#gaming">Gaming</a>
+        </nav>
+    </header>
+
+    <section id="childhood" class="gallery-section">
+        <h2 class="section-title">Childhood Years</h2>
+        <div class="gallery-grid">
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/honors.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/honors.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>First Award in School</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/1stferrari.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/1stferrari.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>Happy Kid</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/stJohnFT.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/stJohnFT.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>First Field Trip with Little Sister</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/grade2class.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/grade2class.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>First Class Picture in New School</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/justAkid.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/justAkid.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>Just A Child</figcaption>
+            </figure>
+        </div>
+        <a href="#top" class="go-top">↑ GO to TOP</a>
+    </section>
+
+    <hr>
+
+    <section id="teenage" class="gallery-section">
+        <h2 class="section-title">Teenage Memories</h2>
+        <div class="gallery-grid">
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/DSC_0305.JPG?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/DSC_0305.JPG?raw=true" class="fitted-img"></a>
+                <figcaption>Graduation Pictorial</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/meandwifey.jpeg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/meandwifey.jpeg?raw=true" class="fitted-img"></a>
+                <figcaption>My Partner and I</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/hedwig23-24.jpeg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/hedwig23-24.jpeg?raw=true" class="fitted-img"></a>
+                <figcaption>St. Hedwig Class '23-'24</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/DSC01732.JPG?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/DSC01732.JPG?raw=true" class="fitted-img"></a>
+                <figcaption>Best Moment</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/lovecats.jpeg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/lovecats.jpeg?raw=true" class="fitted-img"></a>
+                <figcaption>Cats were my Home</figcaption>
+            </figure>
+            </div>
+        <a href="#top" class="go-top">↑ GO to TOP</a>
+    </section>
+
+    <hr>
+
+    <section id="college" class="gallery-section">
+        <h2 class="section-title">College Memories</h2>
+        <div class="gallery-grid">
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/IMG_8770_20240930_115218.JPG?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/IMG_8770_20240930_115218.JPG?raw=true" class="fitted-img"></a>
+                <figcaption>OG Friend Group</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/ue%20friends.jpeg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/ue%20friends.jpeg?raw=true" class="fitted-img"></a>
+                <figcaption>First Year in UE</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/ue%20friends2.jpeg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/ue%20friends2.jpeg?raw=true" class="fitted-img"></a>
+                <figcaption>Second Year in UE</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/THANKYOUSTSCHO.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/THANKYOUSTSCHO.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>Thank You for Making Me Who I am Today</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/notfriendsWOfoodtrip.jpeg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/notfriendsWOfoodtrip.jpeg?raw=true" class="fitted-img"></a>
+                <figcaption>Traditional Food Trip After Class</figcaption>
+            </figure>
+            </div>
+        <a href="#top" class="go-top">↑ GO to TOP</a>
+    </section>
+
+    <hr>
+
+    <section id="gaming" class="gallery-section">
+        <h2 class="section-title">Gaming Memories</h2>
+        <div class="gallery-grid">
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/PlayingaGachaGameHSR.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/PlayingaGachaGameHSR.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>Honkai Star Rail Gameplay</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/HSRBrickedAcc.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/HSRBrickedAcc.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>4 Years of Playing with Worst Characters</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/NBK25PS5.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/NBK25PS5.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>PS5 Gaming</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/loseStreakinValo.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/loseStreakinValo.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>Not an Open World Game But a Ragebait Game</figcaption>
+            </figure>
+            <figure>
+                <a href="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/GenshinImpactColumbinaLuck.jpg?raw=true"><img src="https://github.com/ortegaaica-han/imageAddresses.github.io/blob/main/GenshinImpactColumbinaLuck.jpg?raw=true" class="fitted-img"></a>
+                <figcaption>Luck is Real!</figcaption>
+            </figure>
+            </div>
+        <a href="#top" class="go-top">↑ GO to TOP</a>
+    </section>
+
+    </div>
+
+</body>
+</html>

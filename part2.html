@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grind, Pull, Repeat | Aica Ortega</title>
+    <style>
+        :root {
+            --page-bg: #16425b;
+            --article-bg: #3a7ca5;
+            --title-color: #81c3d7;
+
+            --text-main: #ffffff;
+            --text-muted: #d1e3ee;
+            --accent-glow: #81c3d7;
+        }
+
+        html { 
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--page-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container { 
+            max-width: 850px; 
+            margin: 50px auto; 
+            padding: 20px; 
+        }
+        
+        header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
+        
+        h1 { 
+            font-size: 3rem; 
+            color: #d9dcd6; 
+            text-transform: uppercase; 
+            margin-bottom: 10px; 
+            letter-spacing: 1px;
+        }
+
+        .author-meta {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        
+        article { 
+            background-color: var(--article-bg); 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+        }
+
+        .story-nav {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .story-nav a {
+            color: var(--accent-glow);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        h2 { 
+            color: #d9dcd6; 
+            border-bottom: 2px solid rgba(129, 195, 215, 0.3); 
+            padding-bottom: 10px; 
+            margin-top: 35px; 
+            font-size: 1.6rem;
+        }
+        
+        p { 
+            margin-bottom: 25px; 
+            font-size: 1.15rem; 
+            color: #f0f7fa; 
+        }
+        
+        .highlight { 
+            color: var(--accent-glow); 
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4); 
+        }
+        
+        .go-top { 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            color: var(--text-muted); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            font-style: italic; 
+        }
+        
+        blockquote {
+            background: rgba(22, 66, 91, 0.4);
+            border-left: 5px solid var(--title-color);
+            margin: 30px 0;
+            padding: 20px;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 40px 0;
+        }
+
+        /* Container for the side-by-side images */
+        .image-grid {
+            display: flex;
+            gap: 20px;          /* Space between the two images */
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        /* Make each image link take up equal space */
+        .image-grid a {
+            flex: 1;            /* Forces both links to be the same width */
+            text-decoration: none;
+        }
+
+        .blog-img {
+            width: 100%;        /* Fills the half-width container */
+            height: 250px;      /* Set a fixed height for symmetry */
+            object-fit: cover;  /* Prevents stretching/distortion */
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(129, 195, 215, 0.4);
+        }
+
+        /* Mobile Fix: Stack them vertically on small screens */
+        @media (max-width: 600px) {
+            .image-grid {
+                flex-direction: column;
+            }
+            .blog-img {
+                height: 200px;
+            }
+        }
+
+        .image-grid {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-grid a {
+            flex: 1;
+        }
+
+        .fitted-img {
+            width: 100%;
+            height: 250px; /* Adjust height as needed */
+            object-fit: cover; /* This makes it "fitted" */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .fitted-img:hover {
+            transform: scale(1.02);
+            cursor: zoom-in;
+        }
+
+    </style>
+</head>
+<body id="top"> <div class="container">
+        <header>
+            <h1>Grind, Pull, Repeat</h1>
+            <p class="author-meta">By: Aica Ortega</p>
+        </header>
+
+        <article>
+            <nav class="story-nav">
+                <a href="index.html">🏠 Home</a>
+                <span style="color: var(--text-muted);">|</span>
+                <a href="#ritual">The Ritual</a>
+                <a href="#rules">The Rules</a>
+                <a href="#escape">The Escape</a>
+            </nav>
+
+            <div class="image-grid">
+                <a href="https://image.api.playstation.com/vulcan/ap/rnd/202508/2602/30935168a0f21b6710dc2bd7bb37c23ed937fb9fa747d84c.png" target="_blank">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202508/2602/30935168a0f21b6710dc2bd7bb37c23ed937fb9fa747d84c.png" 
+                        class="blog-img" alt="Gacha Game Visual 1" title="Click to view full image">
+                </a>
+                
+                <a href="https://webstatic.hoyoverse.com/upload/op-public/2023/09/14/3c862d085db721a5625b6e12649399bc_5096494079299377390.png" target="_blank">
+                    <img src="https://webstatic.hoyoverse.com/upload/op-public/2023/09/14/3c862d085db721a5625b6e12649399bc_5096494079299377390.png" 
+                        class="blog-img" alt="Gacha Game Visual 2" title="Click to view full image">
+                </a>
+            </div>
+
+            <section id="ritual">
+                <h2>The Weekend Ritual</h2>
+                <p>
+                    Alam mo yung feeling na pagod na pagod ka na sa buong linggo? 
+                    Between the endless deadlines sa work and the heavy load sa school, minsan feeling ko sasabog na yung utak ko. 
+                    But the moment Friday night hits, I have this one <strong>"habit"</strong> that instantly resets my system. 
+                    No, hindi ako lumalabas para uminom. Instead, I open my favorite game, look at my saved-up currency, and prepare for the <strong>"pull."</strong>
+                </p>
+                <p>
+                    I call it my <strong>healthy gambling addiction.</strong> It sounds like a contradiction, 'di ba? 
+                    But let me explain how this "addiction" actually keeps me sane.
+                </p>
+                <a href="#top" class="go-top">↑ Back to Top</a>
+            </section>
+
+            <section id="rules">
+                <h2>The Rules of the Grind</h2>
+                <p>
+                    The first rule of my "gambling" is simple: <strong>Walang totoong pera.</strong> 
+                    I am a proud member of the F2P (Free-to-Play) community. My "gambling" isn't fueled by my bank account or my allowance; it’s fueled by my effort.
+                </p>
+                <p>
+                    Every day, kahit pagod ako, I spend a few minutes doing my daily quests and grinding for materials. 
+                    Para sa akin, may halaga yung bawat in-game gem or ticket kasi pinaghirapan ko siya. 
+                    There’s a certain kind of discipline involved in saving up for months just to wait for that one character or item banner. 
+                    It’s not about the money; it’s about the payoff of the grind.
+                </p>
+                <a href="#top" class="go-top">↑ Back to Top</a>
+            </section>
+
+            <section id="escape">
+                <h2>Finding the Escape</h2>
+                <p>
+                    When the weekend arrives, doon na pumapasok yung "escape" part. 
+                    This is the time when I finally get to use everything I’ve saved.
+                </p>
+                <p>
+                    Kapag nag-o-open na ako ng loot boxes or nag-wi-wish sa gacha banners, nawawala yung stress ko about school or work. 
+                    In those moments, hindi ko iniisip yung reports na kailangang ipasa o yung exams sa Monday. 
+                    My world shrinks down to just the screen, the music, and the hope of seeing that <span class="highlight">"Gold Glow."</span>
+                </p>
+
+                <div class="image-grid">
+                    <a href="https://o.qoo-img.com/img.qoo-img.com/cimg/album/202204/29/3FpDdR91layhlMfelnSl4QpB.jpg" target="_blank">
+                        <img src="https://o.qoo-img.com/img.qoo-img.com/cimg/album/202204/29/3FpDdR91layhlMfelnSl4QpB.jpg" 
+                             class="fitted-img" alt="Genshin Impact Gold Glow">
+                    </a>
+                    <a href="https://upload-os-bbs.hoyolab.com/upload/2021/02/19/98331002/821118195c34ff8702d854245f276948_6632468707077481822.jpg" target="_blank">
+                        <img src="https://upload-os-bbs.hoyolab.com/upload/2021/02/19/98331002/821118195c34ff8702d854245f276948_6632468707077481822.jpg" 
+                             class="fitted-img" alt="Gacha Pull Result">
+                    </a>
+                </div>
+
+                <p>
+                    Even if I don’t get what I want, the process of playing and strategizing how to get more resources is enough to give my brain a much-needed break from reality.
+                </p>
+                
+                <p>
+                    Sa totoo lang, it’s not really about the virtual items. 
+                    It’s about having a "switch" that I can turn on to signal my brain that work-time is over and play-time has begun. 
+                    I’ve realized that this hobby has taught me a lot about patience and managing expectations. If I win the <strong>RNG (Random Number Generation)</strong> today, great! If not, okay lang—mag-iipon ulit ako. 
+                    It’s a low-stakes way to feel excitement without the real-world consequences of losing money.
+                </p>
+
+                <blockquote>
+                    "To anyone feeling burnt out: find your own 'grind.' Whether it’s gaming, collecting, or any hobby that lets you switch off your 'work brain,' embrace it."
+                </blockquote>
+
+                <p>
+                    For me, as long as I’m not touching my saved allowance money and I’m still having fun, I’ll keep on rolling. 
+                    It’s my way of winning back my peace of mind.
+                </p>
+                <a href="#top" class="go-top">↑ Back to Top</a>
+            </section>
+        </article>
+    </div>
+
+</body>
+</html>
